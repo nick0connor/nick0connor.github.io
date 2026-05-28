@@ -1,0 +1,86 @@
+.contact-section {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+.contact-sub {
+  font-size: 14px;
+  color: var(--ink-muted);
+  line-height: 1.85;
+  margin-bottom: var(--space-lg);
+  margin-top: calc(-1 * var(--space-md));
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-md);
+}
+
+.contact-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-top: 1.5px solid var(--border);
+  gap: var(--space-md);
+  transition: opacity var(--transition);
+}
+
+.contact-item:last-child { border-bottom: 1.5px solid var(--border); }
+.contact-item:hover { opacity: 0.65; }
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  min-width: 80px;
+}
+
+.contact-display {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.contact-item:hover .contact-display { color: var(--plum); }
+
+.contact-resume {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.resume-link {
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+.resume-link:hover { opacity: 0.7; }
+
+.site-footer {
+  border-top: 1.5px solid var(--border);
+  padding: var(--space-sm) 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #ccc;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 480px) {
+  .contact-item { flex-direction: column; gap: 4px; }
+}

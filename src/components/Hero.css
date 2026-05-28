@@ -1,0 +1,121 @@
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(56px + var(--space-lg));
+  padding-bottom: var(--space-xl);
+  border-bottom: 1.5px solid var(--border);
+}
+
+.hero .container {
+  animation: fadeUp 0.6s ease both;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--pink-bg);
+  border: 1.5px solid var(--pink);
+  border-radius: var(--radius-pill);
+  padding: 4px 14px 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--pink-text);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-md);
+}
+
+.hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink);
+  display: inline-block;
+  animation: pulse 2.5s ease infinite;
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 12vw, 7.5rem);
+  font-weight: 800;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-name-logo {
+  height: 1em;   
+  width: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+}
+
+.plum { color: var(--plum); }
+.burgundy { color: var(--burgundy); }
+
+.hero-role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: var(--space-sm);
+}
+
+.hero-bio {
+  font-size: 15px;
+  color: var(--ink-muted);
+  max-width: 420px;
+  line-height: 1.8;
+  margin-bottom: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-plum,
+.btn-burgundy,
+.btn-outline {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 24px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  border: none;
+  transition: opacity var(--transition), transform var(--transition);
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.btn-plum { background: var(--plum); color: #fff; }
+.btn-burgundy { background: var(--burgundy); color: #fff; }
+.btn-outline {
+  background: var(--bg-card);
+  color: var(--ink);
+  border: 1.5px solid var(--border);
+}
+
+.btn-plum:hover,
+.btn-burgundy:hover,
+.btn-outline:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
